@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+}
+
+button {
+    background-color: gray;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #e07700;
+}
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Upper Half Styles */
+.upper-half {
+    position: relative;
+    max-height: 50vh; /* Set the maximum height to 50% of the viewport height */
+    overflow: hidden;
+    z-index: 0; /* Set the z-index to a lower value */
+}
+
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Set the z-index to a lower value */
+}
+
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-text {
+    position: absolute;
+    top: 150px; /* Adjust the top position as needed */
+    left: 650px; /* Adjust the left position as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for text */
+    color: #fff; /* Text color */
+    padding: 10px;
+    font-size: 18px;
+    white-space: nowrap;
+    z-index: 1; /* Set the z-index to a higher value */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    z-index: 2; /* Set the z-index to a higher value */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    z-index: 3; /* Set the z-index to a higher value */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+
+/* Slideshow Styles */
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Top Menu Styles */
+header {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.top-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: #fff; /* White background for the top menu */
+    position: relative; /* Required for positioning the login button */
+}
+
+.top-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.top-menu a {
+    text-decoration: none;
+    color: #333; /* Text color for menu items */
+    font-weight: bold;
+    position: relative;
+}
+
+.top-menu a:hover {
+    color: #007BFF; /* Hover color for menu items */
+    text-decoration: underline;
+}
+
+/* Login Button Styles */
+.login-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Arrow Styles */
+.arrow-down {
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+
+/* Tiles Container Styles */
+.tiles-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff; /* Background color for the tiles container */
+    margin-top: 20px; /* Add some spacing between the tiles and the upper content */
+}
+
+/* Individual Tile Styles */
+.tile {
+    width: calc(25% - 20px); /* Adjust the width and spacing as needed */
+    height: 300px;
+    margin-bottom: 20px; /* Add some spacing between tiles vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.tile img {
+    width: 100%;
+    height: auto;
+}
+
+.tile-text {
+    padding: 10px;
+    text-align: center;
+    background-color: #f7f7f7; /* Background color for the text */
+    color: #333; /* Text color */
+    font-weight: bold;
+}
+
+/* Tile Hover Effect */
+.tile:hover {
+    transform: scale(1.05); /* Increase the size of the tile on hover */
+}
+
+
+/* Chatbot icon Styles */
+.chat-icon {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.chat-icon img {
+    width: 40px; /* Adjust the size of the chatbot icon */
+}
+
+/* Chatbot container Styles */
+.chat-container {
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    right: 20px; /* Adjust the distance from the right */
+    display: none; /* Hide initially */
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+
+

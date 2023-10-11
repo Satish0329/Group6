@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="top-menu">
+                <li><a href="#">College Finder</a></li>
+                <li><a href="#">Admits and Rejects</a></li>
+                <li class="dropdown">
+                    <a href="#">Products <span class="arrow-down">&#9660;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admission_counselling.html">Admission Counselling</a></li>
+                        <li><a href="#">Education Loan Services</a></li>
+                    </ul>
+                </li>
+                <li class="login-button"><a href="login.html">Login</a></li>
+                <li><a href="admission_counselling.html">Ask Our Experts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="upper-half">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="C:\Users\DELL\Downloads\img1.jpg" alt="Image 1">
+                <div class="slide-text">Text for Image 1</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="C:\Users\DELL\Downloads\img2.png" alt="Image 2">
+                <div class="slide-text">Text for Image 2</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="C:\Users\DELL\Downloads\img3.png" alt="Image 3">
+                <div class="slide-text">Text for Image 3</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tiles-container">
+        <div class="tile">
+            <img src="image1.jpg" alt="Tile 1">
+            <div class="tile-text">Tile 1 Text</div>
+        </div>
+        <div class="tile">
+            <img src="image2.jpg" alt="Tile 2">
+            <div class="tile-text">Tile 2 Text</div>
+        </div>
+        <div class="tile">
+            <img src="image3.jpg" alt="Tile 3">
+            <div class="tile-text">Tile 3 Text</div>
+        </div>
+        <div class="tile">
+            <img src="image4.jpg" alt="Tile 4">
+            <div class="tile-text">Tile 4 Text</div>
+        </div>
+    </div>
+
+    <!-- Chatbot icon -->
+<div class="chat-icon" id="chat-icon">
+    <img src="C:\Users\DELL\Downloads\img_chat.png" alt="Chatbot Icon">
+</div>
+
+<!-- Chatbot container -->
+<div class="chat-container" id="chat-container">
+    <h1>Chatbot</h1>
+    <div class="chat-messages" id="chat-messages">
+        <!-- Chat messages will be displayed here -->
+    </div>
+    <input type="text" id="user-input" placeholder="Type a command...">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+        const chatMessages = document.getElementById("chat-messages");
+        const userInput = document.getElementById("user-input");
+
+        function sendMessage() {
+            const userMessage = userInput.value.trim();
+            if (userMessage === "") return;
+
+            // Display user message
+            displayMessage("user-message", userMessage);
+
+            // Process user command
+            handleCommand(userMessage);
+
+            // Clear the input field
+            userInput.value = "";
+        }
+
+        function displayMessage(className, message) {
+            const messageDiv = document.createElement("div");
+            messageDiv.classList.add(className);
+            messageDiv.textContent = message;
+            chatMessages.appendChild(messageDiv);
+
+            // Scroll to the bottom to show the latest message
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function handleCommand(command) {
+            command = command.toLowerCase();
+
+            switch (command) {
+                case "hello":
+                    displayMessage("bot-message", "Hello! How can I assist you?");
+                    break;
+                case "help":
+                    displayMessage("bot-message", "I can provide information and answer questions. Just ask!");
+                    break;
+                case "bye":
+                    displayMessage("bot-message", "Goodbye! Have a great day!");
+                    break;
+                default:
+                    displayMessage("bot-message", "I'm sorry, I don't understand that command.");
+            }
+        }
+
+    </script>
+  
+    <script src="script.js"></script>
+</body>
+</html>
