@@ -11,6 +11,7 @@
 			//mysqli_query($link,$qu);
 			//header("Location: http://localhost/Remote_health_care/Appointments.php");
 		echo "you are successfully registered and logged";
+		header("Location: https://yashwanthgunisetty.wixsite.com/ed-grad");
     }
         else{
     	    	echo "Error";

@@ -14,7 +14,7 @@
 		if(($row['name']==$name)&&($row['password']==$pass)){
 			echo "Logged Sucessfully!";
 			
-			//header("Location: http://localhost/remote_health_care/Appointments.php");
+			header("Location: https://yashwanthgunisetty.wixsite.com/ed-grad");
 			break;
 		}
     }
