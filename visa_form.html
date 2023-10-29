@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Appointment Form</title>
+</head>
+<body>
+    <h1>Visa Appointment Form</h1>
+    <form action="submit_form.php" method="post">
+        <h2>Preferred OFC Details</h2>
+        <label for="ofc-location">Preferred OFC Location:</label>
+        <input type="text" name="ofc-location" id="ofc-location" required>
+
+        <label for="ofc-date">Preferred OFC Date:</label>
+        <input type="date" name="ofc-date" id="ofc-date" required>
+
+        <h2>Preferred Visa Interview Consulate Details</h2>
+        <label for="consulate-location">Preferred Consulate Location:</label>
+        <input type="text" name="consulate-location" id="consulate-location" required>
+
+        <label for="consulate-date">Preferred Consulate Date:</label>
+        <input type="date" name="consulate-date" id="consulate-date" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
