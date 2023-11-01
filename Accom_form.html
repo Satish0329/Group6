@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Accommodation Preferences Form</title>
+</head>
+<body>
+    <h1>University Accommodation Preferences Form</h1>
+    <form action="submit_accommodation_preferences.php" method="post">
+        <h2>Off-Campus Housing Details</h2>
+        <label for="off-campus-preference">Preferred Off-Campus Housing:</label>
+        <input type="text" name="off-campus-preference" id="off-campus-preference" required>
+
+        <label for="off-campus-budget">Budget for Off-Campus Housing:</label>
+        <input type="number" name="off-campus-budget" id="off-campus-budget" required>
+
+        <label for="off-campus-location">Preferred Location:</label>
+        <input type="text" name="off-campus-location" id="off-campus-location" required>
+
+        <label for="off-campus-amenities">Desired Amenities:</label>
+        <textarea name="off-campus-amenities" id="off-campus-amenities" rows="4" required></textarea>
+
+        <h2>On-Campus Housing Details</h2>
+        <label for="on-campus-preference">Preferred On-Campus Housing:</label>
+        <input type="text" name="on-campus-preference" id="on-campus-preference" required>
+
+        <label for="on-campus-amenities">Desired Amenities:</label>
+        <textarea name="on-campus-amenities" id="on-campus-amenities" rows="4" required></textarea>
+
+        <label for="on-campus-dining">Dining Preferences:</label>
+        <input type="text" name="on-campus-dining" id="on-campus-dining" required>
+
+        <label for="on-campus-roommate">Roommate Preference (if applicable):</label>
+        <input type="text" name="on-campus-roommate" id="on-campus-roommate">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
