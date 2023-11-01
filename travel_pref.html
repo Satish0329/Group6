@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Preferences Form</title>
+</head>
+<body>
+    <h1>Travel Preferences Form</h1>
+    <form action="submit_travel_preferences.php" method="post">
+        <h2>Preferred Travel Details</h2>
+        <label for="journey-date">Preferred Date of Journey:</label>
+        <input type="date" name="journey-date" id="journey-date" required>
+
+        <label for="travel-class">Preferred Travel Class:</label>
+        <select name="travel-class" id="travel-class" required>
+            <option value="economy">Economy</option>
+            <option value="premium-economy">Premium Economy</option>
+            <option value="business">Business Class</option>
+        </select>
+
+        <label for="cost-range">Cost Range for Ticket:</label>
+        <input type="text" name="cost-range" id="cost-range" required>
+
+        <label for="airline-preference">Airline Preferences:</label>
+        <input type="text" name="airline-preference" id="airline-preference">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
