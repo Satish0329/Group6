@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Application Form</title>
+</head>
+<body>
+    <h1>Scholarship Application Form</h1>
+    <form action="submit_scholarship_application.php" method="post">
+        <label for="undergrad-gpa">Undergraduate GPA:</label>
+        <input type="text" name="undergrad-gpa" id="undergrad-gpa" required>
+
+        <label for="gre-scores">GRE Scores:</label>
+        <input type="text" name="gre-scores" id="gre-scores" required>
+
+        <label for="toefl-scores">TOEFL Scores:</label>
+        <input type="text" name="toefl-scores" id="toefl-scores" required>
+
+        <h2>Prior Experiences</h2>
+        <label for="employment-experience">Full-Time Employment Experience:</label>
+        <textarea name="employment-experience" id="employment-experience" rows="4"></textarea>
+
+        <label for="research-experience">Research Work Experience:</label>
+        <textarea name="research-experience" id="research-experience" rows="4"></textarea>
+
+        <label for="other-experience">Other Relevant Experiences:</label>
+        <textarea name="other-experience" id="other-experience" rows="4"></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</body>
+</html>
