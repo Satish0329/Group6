@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Community</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+    <h1>Welcome to University Community</h1>
+
+    <label for="majorFilter">Filter by Major:</label>
+    <select id="majorFilter" onchange="filterByMajor()">
+        <option value="all">All Majors</option>
+        <option value="computerScience">Computer Science</option>
+        <option value="biology">Biology</option>
+        <!-- Add more major options as needed -->
+    </select>
+
+    <div id="communityList">
+        <!-- Community members will be displayed here -->
+    </div>
+
+    <script>
+        // Sample data (replace with actual data from the server)
+        const communityMembers = [
+            { name: 'John Doe', major: 'computerScience' },
+            { name: 'Jane Smith', major: 'biology' },
+            { name: 'Bob Johnson', major: 'computerScience' },
+            // Add more members as needed
+        ];
+
+        // Function to filter community members by major
+        function filterByMajor() {
+            const selectedMajor = document.getElementById('majorFilter').value;
+
+            // Filter community members based on the selected major
+            const filteredMembers = selectedMajor === 'all'
+                ? communityMembers
+                : communityMembers.filter(member => member.major === selectedMajor);
+
+            // Display filtered members
+            displayCommunityMembers(filteredMembers);
+        }
+
+        // Function to display community members
+        function displayCommunityMembers(members) {
+            const communityList = document.getElementById('communityList');
+
+            // Clear existing content
+            communityList.innerHTML = '';
+
+            // Display each member
+            members.forEach(member => {
+                const memberDiv = document.createElement('div');
+                memberDiv.textContent = `${member.name} - ${member.major}`;
+                communityList.appendChild(memberDiv);
+            });
+        }
+
+        // Initial display with all members
+        displayCommunityMembers(communityMembers);
+    </script>
+</body>
+</html>
