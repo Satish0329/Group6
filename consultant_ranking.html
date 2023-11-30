@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultants</title>
+    <style>
+        /* Add your styles here */
+        .consultant {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .consultant img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consultants</h1>
+
+    <div id="consultantsList">
+        <!-- Consultant details will be displayed here -->
+    </div>
+
+    <script>
+        // Sample data (replace with actual data from the server)
+        const consultants = [
+            { name: 'John Doe', rating: 4, image: 'consultant1.jpg' },
+            { name: 'Jane Smith', rating: 5, image: 'consultant2.jpg' },
+            { name: 'Bob Johnson', rating: 4.5, image: 'consultant3.jpg' },
+            // Add more consultants as needed
+        ];
+
+        // Function to display consultant details
+        function displayConsultants(consultants) {
+            const consultantsList = document.getElementById('consultantsList');
+
+            // Clear existing content
+            consultantsList.innerHTML = '';
+
+            // Display each consultant
+            consultants.forEach(consultant => {
+                const consultantDiv = document.createElement('div');
+                consultantDiv.classList.add('consultant');
+
+                // Consultant image
+                const image = document.createElement('img');
+                image.src = consultant.image;
+                consultantDiv.appendChild(image);
+
+                // Consultant name
+                const name = document.createElement('div');
+                name.textContent = consultant.name;
+                consultantDiv.appendChild(name);
+
+                // Star ratings
+                const ratings = document.createElement('div');
+                ratings.textContent = `Rating: ${consultant.rating} stars`;
+                consultantDiv.appendChild(ratings);
+
+                consultantsList.appendChild(consultantDiv);
+            });
+        }
+
+        // Initial display
+        displayConsultants(consultants);
+    </script>
+</body>
+</html>
